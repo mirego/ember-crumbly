@@ -105,9 +105,7 @@ export default Component.extend({
           breadCrumbs.pushObject(breadCrumb);
         });
       } else {
-        let breadCrumb = copy(getWithDefault(route, 'breadCrumb', {
-          title: classify(name)
-        }));
+        let breadCrumb = copy(getWithDefault(route, 'breadCrumb', null));
 
         if (typeOf(breadCrumb) === 'null') {
           return;
